@@ -3,6 +3,7 @@ from ai_feature_engineering import AI_Feature_Engineering
 import os
 import numpy as np
 
+
 class TestAIFeatureEngineering(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -24,11 +25,11 @@ class TestAIFeatureEngineering(unittest.TestCase):
     <article>
         <section class="issue-summary">
             <h2>Issue Summary</h2>
-            <p><strong>Issue ID:</strong> <span class="issue-id">TEST001</span></p>
-            <p><strong>Component:</strong> <span class="component">Test Component</span></p>
-            <p><strong>Issue Type:</strong> <span class="issue-type">Test Type</span></p>
-            <p><strong>Date Reported:</strong> <span class="date-reported">2024-03-24</span></p>
-            <p><strong>Affected Systems:</strong> <span class="affected-systems">Test System</span></p>
+            <p><strong>Issue ID:</strong> <span id="issue-id">TEST001</span></p>
+            <p><strong>Component:</strong> <span id="component">Test Component</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Test Type</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-24</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Test System</span></p>
         </section>
         <section class="issue-description">
             <h2>Issue Description</h2>
@@ -69,6 +70,14 @@ class TestAIFeatureEngineering(unittest.TestCase):
         issues_info = ai_fe.process_files()
         self.assertEqual(len(issues_info), 1)
         self.assertEqual(issues_info[0]['issue_id'], 'TEST001')
+        print("------------------")
+        print(f"Total issues parsed: {len(issues_info)}")
+        print()
+        for issue_info in issues_info:
+            print(f"{issue_info}")
+            print()
+        print("------------------")
+
 
     def test_feature_engineering(self):
         ai_fe = AI_Feature_Engineering(self.test_dir)
@@ -76,6 +85,7 @@ class TestAIFeatureEngineering(unittest.TestCase):
         _, matrix = ai_fe.feature_engineering(issues_info)
         self.assertTrue(isinstance(matrix, np.ndarray))
         self.assertEqual(matrix.shape[0], 1)  # Expecting one sample
+
 
 if __name__ == '__main__':
     unittest.main()
