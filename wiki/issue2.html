@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page 2: Service B Connectivity Issue</title>
+</head>
+<body>
+    <article>
+        <section class="issue-summary">
+            <h2>Issue Summary</h2>
+            <p><strong>Issue ID:</strong> <span id="issue-id">SERV002</span></p>
+            <p><strong>Component:</strong> <span id="component">Service B (Java)</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Change</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-25</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Service B</span></p>
+        </section>
+        <section class="issue-description">
+            <h2>Issue Description</h2>
+            <p>Service B experiences connectivity issues post-update, leading to data access problems for downstream services.</p>
+        </section>
+        <section class="architecture-overview">
+            <h2>Architecture Overview</h2>
+            <p>App connects to Service A, which connects to Service B, which then connects to Service C (Database).</p>
+        </section>
+        <section class="possible-causes">
+            <h2>Possible Causes</h2>
+            <ul>
+                <li>Incompatible library versions introduced in the latest update.</li>
+                <li>Misconfigured network settings in Service B.</li>
+                <li>Firewall rules blocking communication between Service A and Service B.</li>
+            </ul>
+        </section>
+        <section class="resolution-steps">
+            <h2>Resolution Steps</h2>
+            <ol>
+                <li>Library Version Check: Ensure that all library versions are compatible across services.</li>
+                <li>Network Configuration: Verify Service B's network settings and ensure they are correctly configured.</li>
+                <li>Firewall Rules Review: Check if new firewall rules are inadvertently blocking traffic between Service A and Service B.</li>
+            </ol>
+        </section>
+        <section class="resolution-outcome">
+            <h2>Resolution Outcome</h2>
+            <p>Rolling back to the previous version of Service B and then carefully updating with compatible library versions resolved the issue.</p>
+        </section>
+    </article>
+</body>
+</html>

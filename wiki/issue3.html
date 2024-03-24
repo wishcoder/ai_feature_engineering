@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page 3: Database Performance Degradation</title>
+</head>
+<body>
+    <article>
+        <section class="issue-summary">
+            <h2>Issue Summary</h2>
+            <p><strong>Issue ID:</strong> <span id="issue-id">DB003</span></p>
+            <p><strong>Component:</strong> <span id="component">Service C (Database)</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Unavailability</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-26</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Service C</span></p>
+        </section>
+        <section class="issue-description">
+            <h2>Issue Description</h2>
+            <p>Service C (Database) shows significant performance degradation, affecting real-time data processing capabilities.</p>
+        </section>
+        <section class="architecture-overview">
+            <h2>Architecture Overview</h2>
+            <p>App connects to Service A, which connects to Service B, which then connects to Service C (Database).</p>
+        </section>
+        <section class="possible-causes">
+            <h2>Possible Causes</h2>
+            <ul>
+                <li>Unoptimized queries consuming excessive resources.</li>
+                <li>Database nearing storage capacity limits.</li>
+                <li>Hardware issues on the database server.</li>
+            </ul>
+        </section>
+        <section class="resolution-steps">
+            <h2>Resolution Steps</h2>
+            <ol>
+                <li>Query Optimization: Review and optimize slow-running database queries.</li>
+                <li>Storage Check: Ensure the database has sufficient storage available.</li>
+                <li>Hardware Inspection: Check the database server's hardware for potential failures.</li>
+            </ol>
+        </section>
+        <section class="resolution-outcome">
+            <h2>Resolution Outcome</h2>
+            <p>Optimizing several key database queries and archiving old data to free up storage space resolved the performance issues.</p>
+        </section>
+    </article>
+</body>
+</html>

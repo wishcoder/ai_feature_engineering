@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page 5: Service B Unavailability</title>
+</head>
+<body>
+    <article>
+        <section class="issue-summary">
+            <h2>Issue Summary</h2>
+            <p><strong>Issue ID:</strong> <span id="issue-id">SVB003</span></p>
+            <p><strong>Component:</strong> <span id="component">Service B (Java)</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Unavailability</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-26</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Service B</span></p>
+        </section>
+        <section class="issue-description">
+            <h2>Issue Description</h2>
+            <p>Service B is currently not responding, leading to a breakdown in the service chain affecting downstream database access.</p>
+        </section>
+        <section class="architecture-overview">
+            <h2>Architecture Overview</h2>
+            <p>Outside network connects to Router, Router connects to firewall that sends traffic to App, App connects to Service A, which connects to Service B, which then connects to Service C (Database).</p>
+        </section>
+        <section class="possible-causes">
+            <h2>Possible Causes</h2>
+            <ul>
+                <li>Service B process crash due to memory leaks.</li>
+                <li>Network partitioning preventing access to Service B.</li>
+            </ul>
+        </section>
+        <section class="resolution-steps">
+            <h2>Resolution Steps</h2>
+            <ol>
+                <li>Restart Service B: Attempt to restart the service to recover from any non-persistent issues.</li>
+                <li>Check Logs: Review Service B's logs for errors that occurred just before the unavailability.</li>
+                <li>Network Diagnostics: Run network diagnostics to ensure there is no partitioning issue.</li>
+            </ol>
+        </section>
+        <section class="resolution-outcome">
+            <h2>Resolution Outcome</h2>
+            <p>Restarting Service B and applying a patch to fix the memory leak issue restored its availability.</p>
+        </section>
+    </article>
+</body>
+</html>

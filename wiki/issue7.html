@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page 7: Router Configuration Change Issue</title>
+</head>
+<body>
+    <article>
+        <section class="issue-summary">
+            <h2>Issue Summary</h2>
+            <p><strong>Issue ID:</strong> <span id="issue-id">RTR005</span></p>
+            <p><strong>Component:</strong> <span id="component">Router</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Change</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-28</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Network Connectivity</span></p>
+        </section>
+        <section class="issue-description">
+            <h2>Issue Description</h2>
+            <p>A recent update to the router's configuration has led to intermittent network connectivity issues, affecting all services relying on network access.</p>
+        </section>
+        <section class="architecture-overview">
+            <h2>Architecture Overview</h2>
+            <p>Outside network connects to Router, which then sends traffic to the firewall. The firewall routes traffic to the Application (App), which connects to Service A, Service B, and then to Service C (Database).</p>
+        </section>
+        <section class="possible-causes">
+            <h2>Possible Causes</h2>
+            <ul>
+                <li>Incorrect routing rules applied during the recent configuration change.</li>
+                <li>IP address conflicts introduced by the new configuration.</li>
+                <li>Firewall rules not updated to reflect changes in router configuration.</li>
+            </ul>
+        </section>
+        <section class="resolution-steps">
+            <h2>Resolution Steps</h2>
+            <ol>
+                <li>Configuration Review: Examine the router's configuration for any incorrect settings or rules.</li>
+                <li>Network Testing: Perform network connectivity tests to identify specific points of failure.</li>
+                <li>Rollback Configuration: If issues persist, consider rolling back to a previous configuration known to be stable.</li>
+            </ol>
+        </section>
+        <section class="resolution-outcome">
+            <h2>Resolution Outcome</h2>
+            <p>Reverting to the previous router configuration and then incrementally applying changes with thorough testing at each step resolved the connectivity issues.</p>
+        </section>
+    </article>
+</body>
+</html>

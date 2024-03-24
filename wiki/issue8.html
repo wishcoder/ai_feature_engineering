@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page 8: Server Configuration Change Issue</title>
+</head>
+<body>
+    <article>
+        <section class="issue-summary">
+            <h2>Issue Summary</h2>
+            <p><strong>Issue ID:</strong> <span id="issue-id">SRV006</span></p>
+            <p><strong>Component:</strong> <span id="component">Server</span></p>
+            <p><strong>Issue Type:</strong> <span id="issue-type">Change</span></p>
+            <p><strong>Date Reported:</strong> <span id="date-reported">2024-03-29</span></p>
+            <p><strong>Affected Systems:</strong> <span id="affected-systems">Application Performance</span></p>
+        </section>
+        <section class="issue-description">
+            <h2>Issue Description</h2>
+            <p>Following a recent server configuration update, the application hosted on the server has experienced significant performance degradation, impacting user experience.</p>
+        </section>
+        <section class="architecture-overview">
+            <h2>Architecture Overview</h2>
+            <p>The server in question hosts the Application (App), which connects to Service A, Service B, and then to Service C (Database). The server's configuration is crucial for optimal application performance.</p>
+        </section>
+        <section class="possible-causes">
+            <h2>Possible Causes</h2>
+            <ul>
+                <li>Improper memory allocation settings applied during the update.</li>
+                <li>Changes in network configuration leading to increased latency.</li>
+                <li>Security settings updated in a way that inadvertently restricts application functionality.</li>
+            </ul>
+        </section>
+        <section class="resolution-steps">
+            <h2>Resolution Steps</h2>
+            <ol>
+                <li>Review Configuration Changes: Examine the server's configuration changes to identify any settings that could impact performance.</li>
+                <li>Performance Monitoring: Utilize server and application monitoring tools to pinpoint the source of the degradation.</li>
+                <li>Configuration Rollback: If necessary, revert the server to its previous configuration to restore performance.</li>
+            </ol>
+        </section>
+        <section class="resolution-outcome">
+            <h2>Resolution Outcome</h2>
+            <p>After reviewing the recent configuration changes, it was discovered that an incorrect memory allocation setting was the root cause. Adjusting this setting and monitoring application performance confirmed that the issue was resolved.</p>
+        </section>
+    </article>
+</body>
+</html>
